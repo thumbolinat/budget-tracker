@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "lite-server": "lite-server"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,14 @@
   "bugs": {
     "url": "https://github.com/thumbolinat/budget-tracker"
   },
-  "homepage": "https://github.com/thumbolinat/budget-tracker"
+  "homepage": "https://github.com/thumbolinat/budget-tracker",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.17.3",
+    "fetch": "^1.1.0",
+    "mongoose": "^5.5.15",
+    "morgan": "^1.9.1"
+   
+  }
+  
 }
