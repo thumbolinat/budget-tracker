@@ -8,8 +8,6 @@
     "start": "node server.js",
     "lite-server": "lite-server"
   },
-  
-  
   "author": "",
   "license": "MIT",
   "bugs": {
@@ -18,11 +16,11 @@
   "homepage": "https://github.com/thumbolinat/budget-tracker",
   "dependencies": {
     "compression": "^1.7.4",
+    "concurrently": "^7.1.0",
     "express": "^4.17.3",
     "fetch": "^1.1.0",
     "mongoose": "^5.5.15",
-    "morgan": "^1.9.1"
-   
+    "morgan": "^1.9.1",
+    "webpack-dev-server": "^4.8.1"
   }
-  
 }
