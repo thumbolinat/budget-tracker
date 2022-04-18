@@ -34,7 +34,6 @@ self.addEventListener("fetch", function(event) {
       caches.open(DATA_CACHE_NAME).then(cache => {
         return fetch(event.request)
           .then(response => {
-            // If the response was good, clone it and store it in the cache.
             if (response.status === 200) {
               cache.put(event.request.url, response.clone());
             }
@@ -56,7 +55,6 @@ self.addEventListener("fetch", function(event) {
         if (response) {
           return response;
         } else if (event.request.headers.get("accept").includes("text/html")) {
-          // return the cached home page for all requests for html pages
           return caches.match("/");
         }
       });
@@ -64,16 +62,12 @@ self.addEventListener("fetch", function(event) {
   );
 });
 
-// Delete outdated caches
 self.addEventListener('activate', function (e) {
   e.waitUntil(
     caches.keys().then(function (keyList) {
-      // `keyList` contains all cache names under your username.github.io
-      // filter out ones that has this app prefix to create white list
       let cacheKeeplist = keyList.filter(function (key) {
         return key.indexOf(APP_PREFIX);
       })
-      // add current cache name to white list
       cacheKeeplist.push(CACHE_NAME);
 
       return Promise.all(keyList.map(function (key, i) {
