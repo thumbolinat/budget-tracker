@@ -1,25 +1,27 @@
 {
   "name": "budget-tracker",
   "version": "1.0.0",
-  "description": "Budget tracking application",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "lite-server": "lite-server"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thumbolinat/budget-tracker"
+  },
   "author": "",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/thumbolinat/budget-tracker"
   },
-  "homepage": "https://github.com/thumbolinat/budget-tracker",
+  "homepage": "https://github.com/thumbolinat/budget-tracker/blob/main/README.md",
   "dependencies": {
     "compression": "^1.7.4",
-    "concurrently": "^7.1.0",
-    "express": "^4.17.3",
-    "fetch": "^1.1.0",
-    "mongoose": "^5.5.15",
+    "express": "^4.17.1",
+    "mongoose": "^4.4.13",
     "morgan": "^1.9.1"
   }
 }
